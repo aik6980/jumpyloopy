@@ -195,7 +195,8 @@ class Main extends luxe.Game
 		// achievement
 		achievement_manager = new AchievementManager();
 		
-		load_user_data();
+		// #and_wip
+		//load_user_data();
 		
 		achievement_manager.unlockables = Main.user_data.unlockables;
 		
@@ -313,11 +314,12 @@ class Main extends luxe.Game
 		config.window.width = global_info.ref_window_size_x;// 405;
 		config.window.height = global_info.ref_window_size_y;// 720;
 #else
-		config.window.width = global_info.window_size_x;// 405;
-		config.window.height = global_info.window_size_y;// 720;
-		config.window.borderless = global_info.borderless;
-		config.window.fullscreen = global_info.fullscreen;
-		config.window.resizable = false;
+		// #and_wip
+		config.window.width = 405;
+		config.window.height = 720;
+		//config.window.borderless = global_info.borderless;
+		//config.window.fullscreen = global_info.fullscreen;
+		//config.window.resizable = false;
 #end
 	
 		// preload all parcel description

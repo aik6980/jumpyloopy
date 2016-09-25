@@ -24,7 +24,8 @@ import phoenix.Batcher;
 import snow.api.Promise;
 import snow.api.buffers.Int16Array;
 import snow.api.buffers.Uint8Array;
-import systools.Dialogs;
+// #and_wip
+//import systools.Dialogs;
 
 /**
  * ...
@@ -435,7 +436,8 @@ class BeatManager extends Entity
 			var test_fmt = (music.source.data.channels == 2) && (music.source.data.rate == 44100);
 			if (!test_fmt)
 			{
-				Dialogs.message("Error", "Unsupported Audio Format, the game only supported OGG with 2 Channels and 44100Hz SampleRate", true);
+				// #and_wip
+				//Dialogs.message("Error", "Unsupported Audio Format, the game only supported OGG with 2 Channels and 44100Hz SampleRate", true);
 				Luxe.events.fire("BeatManager.AudioLoadingFailed", {}, false );
 				return;
 			}

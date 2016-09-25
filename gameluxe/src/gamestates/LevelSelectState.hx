@@ -20,8 +20,8 @@ import mint.types.Types.TextAlign;
 import snow.types.Types.AudioHandle;
 import ui.MintImageButton;
 
-#if (cpp || neko)
-import systools.Dialogs;
+#if ((cpp || neko) && windows)
+	import systools.Dialogs;
 #end
 
 /**
@@ -155,7 +155,7 @@ class LevelSelectState extends State
 		item = new MintImageButton(Main.canvas, "Arcade", new Vector(470+150, 335), new Vector(204, 44), "assets/image/ui/UI_track_selection_arcade.png");
 		item.onmouseup.listen(function(e,c) {
 			//change_to = "GameState";
-			#if cpp
+			#if (cpp && windows)
 			var filters: FILEFILTERS = { count: 1
 			, descriptions: ["OGG files"]
 			, extensions: ["*.ogg"]	
